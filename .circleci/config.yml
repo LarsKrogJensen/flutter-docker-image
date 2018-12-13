@@ -1,16 +1,18 @@
 version: 2
 jobs:
   build:
+    environment:
+      - FLUTTER_VERSION: 1.1.0
     docker:
-    - image: circleci/elixir:1.7.3
+      - image: circleci/elixir:1.7.3
 
     working_directory: ~/repo
     steps:
-    - checkout
-    - setup_remote_docker:
-        docker_layer_caching: true
+      - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
 
-    # specify any bash command here prefixed with `run: `
-    - run: docker build -t larskj/flutter:1.0.0 .
-    - run: docker login -u $DOCKER_USER -p $DOCKER_PWD
-    - run: docker push larskj/flutter:1.0.0
+      # specify any bash command here prefixed with `run: `
+      - run: docker build -t larskj/flutter:${FLUTTER_VERSION} .
+      - run: docker login -u $DOCKER_USER -p $DOCKER_PWD
+      - run: docker push larskj/flutter:${FLUTTER_VERSION}
