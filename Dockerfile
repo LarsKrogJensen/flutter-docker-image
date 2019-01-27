@@ -2,7 +2,7 @@ FROM cirrusci/android-sdk:28
 
 ENV LANG en_US.UTF-8
 ENV FLUTTER_HOME ${HOME}/sdks/flutter
-ENV FLUTTER_VERSION 1.1.0
+ENV FLUTTER_VERSION 1.0.0
 ENV PATH ${PATH}:${FLUTTER_HOME}/bin:${FLUTTER_HOME}/bin/cache/dart-sdk/bin
 
 
