@@ -1,4 +1,4 @@
-FROM cirrusci/android-sdk:26
+FROM circleci/android:api-28
 
 ENV LANG en_US.UTF-8
 ENV FLUTTER_HOME ${HOME}/sdks/flutter
