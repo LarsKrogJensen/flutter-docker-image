@@ -13,6 +13,6 @@ jobs:
           docker_layer_caching: true
 
       # specify any bash command here prefixed with `run: `
-      - run: docker build --build-arg flutter_version_arg=${FLUTTER_VERSION} -t larskj/flutter:${FLUTTER_VERSION} .
+      - run: docker build --build-arg FLUTTER_VERSION=${FLUTTER_VERSION} -t larskj/flutter:${FLUTTER_VERSION} .
       - run: docker login -u $DOCKER_USER -p $DOCKER_PWD
       - run: docker push larskj/flutter:${FLUTTER_VERSION}

@@ -1,10 +1,10 @@
 FROM circleci/android:api-28
 
-ARG FV
+ARG FLUTTER_VERSION
 
 ENV LANG en_US.UTF-8
 ENV FLUTTER_HOME ${HOME}/sdks/flutter
-ENV FLUTTER_VERSION ${FV}
+#ENV FLUTTER_VERSION ${flutter_version_arg}
 ENV PATH ${PATH}:${FLUTTER_HOME}/bin:${FLUTTER_HOME}/bin/cache/dart-sdk/bin
 
 
