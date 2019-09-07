@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     environment:
-      - FLUTTER_VERSION: 1.8.1
+      - FLUTTER_VERSION:  v1.9.1+hotfix.1
     docker:
       - image: circleci/elixir:1.7.3
 
