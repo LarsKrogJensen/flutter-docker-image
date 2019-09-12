@@ -1,4 +1,4 @@
-FROM circleci/android:api-28
+FROM circleci/android:api-29
 
 ARG FLUTTER_VERSION
 
