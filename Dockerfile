@@ -15,7 +15,7 @@ RUN sudo locale-gen en_US "en_US.UTF-8" \
     && sudo dpkg-reconfigure locales
 
 
-RUN git clone --branch v${FLUTTER_VERSION} https://github.com/flutter/flutter.git ${FLUTTER_HOME}
+RUN git clone --branch ${FLUTTER_VERSION} https://github.com/flutter/flutter.git ${FLUTTER_HOME}
 
 
 # doctor
